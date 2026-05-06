@@ -1,4 +1,3 @@
-// #MOVIECARD should show IMAGE, NAME OF THE MOVIE, RELREASE DATE, FAVORITE.
 import type { Movie } from "../types/movie.types";
 
 interface MovieCardProps {
