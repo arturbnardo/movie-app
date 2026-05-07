@@ -17,10 +17,10 @@ function Home() {
   }
 
   return (
-    <div className="p-8 w-full">
+    <div className="py-4 sm:p-8 w-full">
       <form
         onSubmit={handleSearch}
-        className="max-w-2xl mt-0 mx-auto mb-8 flex gap-4 px-4"
+        className="max-w-2xl mt-0 mx-auto mb-4 sm:mb-8 flex gap-4 px-4"
       >
         <input
           type="text"
