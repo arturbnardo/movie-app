@@ -14,7 +14,7 @@ function MovieCard({ movie }: MovieCardProps) {
       <div className="relative aspect-[2/3] w-full">
         <img
           className="h-full w-full object-cover"
-          src={movie.url}
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
         />
 
@@ -29,8 +29,10 @@ function MovieCard({ movie }: MovieCardProps) {
       </div>
 
       <div className="p-3 md:p-4 flex flex-col gap-2 flex-1">
-        <h3 className="text-base">{movie.title}</h3>
-        <p className="text-[#999] text-sm">{movie.releaseDate}</p>
+        <h3 className="text-base text-white">{movie.title}</h3>
+        <p className="text-[#999] text-sm">
+          {movie.release_date?.split("-")[0]}
+        </p>
       </div>
     </div>
   );
