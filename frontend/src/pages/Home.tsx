@@ -1,8 +1,8 @@
 import type React from "react";
+import type { Movie } from "../types/movie.types";
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
 import MovieCard from "../Components/MovieCard";
-import type { Movie } from "../types/movie.types";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -59,16 +59,16 @@ function Home() {
         />
         <button
           type="submit"
-          className="py-3 px-6 bg-[#e50914] text-white rounded font-medium transition-colors duration-200 whitespace-nowrap hover:bg-[#f40612]"
+          className="py-3 px-6 bg-[#e50914] text-white rounded font-medium transition-colors duration-200 whitespace-nowrap hover:bg-[#f40612] cursor-pointer"
         >
           Search
         </button>
       </form>
 
-      {error && <div className="error-message">{error}</div>}
+      {error && <div>{error}</div>}
 
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div>Loading...</div>
       ) : (
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 p-4 w-full">
           {movies.map((movie) => (

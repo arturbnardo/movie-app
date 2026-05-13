@@ -20,7 +20,7 @@ function MovieCard({ movie }: MovieCardProps) {
 
         <div className="absolute inset-0 bg-linear-to-b from-black/10 to-black/80 opacity-0 transition-opacity duration-200 flex flex-col justify-end p-4 group-hover:opacity-100">
           <button
-            className="absolute top-4 right-4 text-white text-[1.2rem] md:text-2xl p-2 bg-black/50 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-colors duration-200 hover:bg-black/80"
+            className="absolute top-4 right-4 text-white text-[1.2rem] md:text-2xl p-2 bg-black/50 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-colors duration-200 hover:bg-black/80 cursor-pointer"
             onClick={handleFavMovie}
           >
             ♥
