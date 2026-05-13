@@ -20,7 +20,7 @@ export const useMovieContext = () => {
   const context = useContext(MovieContext);
 
   if (!context) {
-    throw new Error("useMovieContext deve ser usado dentro do MovieProvider");
+    throw new Error("useMovieContext must be used inside the MovieProvider");
   }
 
   return context;
